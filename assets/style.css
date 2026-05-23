@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,400;1,700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-serif-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+
+.foodnest-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    color: #374151;
+    transition: all 0.2s ease;
+}
+
+.foodnest-input:focus {
+    outline: none;
+    border-color: #16a34a;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.15);
+}
