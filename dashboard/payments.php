@@ -22,7 +22,6 @@ include __DIR__ . '/../includes/navbar.php';
     <title>Payment Simulation - FoodNest</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        
         .payment-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .payment-card.active { border-color: #16a34a; background-color: rgba(22, 163, 74, 0.05); }
     </style>
@@ -88,32 +87,32 @@ include __DIR__ . '/../includes/navbar.php';
                     
                     <div id="form-mfs" class="hidden space-y-4">
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" id="label-mfs-phone">Mobile Number</label>
-                            <input type="text" placeholder="01XXXXXXXXX" class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-xl focus:outline-none focus:border-green-600">
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" id="label-mfs-phone">Phone Number</label>
+                            <input type="text" id="mfs-phone" maxlength="11" placeholder="01XXXXXXXXX" class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-xl focus:outline-none focus:border-green-600">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Enter PIN</label>
-                            <input type="password" placeholder="••••" maxlength="4" class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-xl focus:outline-none focus:border-green-600">
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" id="label-mfs-pin">Enter PIN</label>
+                            <input type="password" id="mfs-pin" placeholder="••••" maxlength="5" class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-xl focus:outline-none focus:border-green-600">
                         </div>
                     </div>
 
                     <div id="form-card" class="hidden space-y-4">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Card Holder Name</label>
-                            <input type="text" placeholder="John Doe" class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-xl focus:outline-none focus:border-green-600">
+                            <input type="text" id="card-name" placeholder="John Doe" class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-xl focus:outline-none focus:border-green-600">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Card Number</label>
-                            <input type="text" placeholder="4242 4242 4242 4242" class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-xl focus:outline-none focus:border-green-600">
+                            <input type="text" id="card-number" placeholder="4242 4242 4242 4242" class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-xl focus:outline-none focus:border-green-600">
                         </div>
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Expiry Date</label>
-                                <input type="text" placeholder="MM/YY" class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-xl focus:outline-none focus:border-green-600">
+                                <input type="text" id="card-expiry" placeholder="MM/YY" class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-xl focus:outline-none focus:border-green-600">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">CVV</label>
-                                <input type="password" placeholder="•••" maxlength="3" class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-xl focus:outline-none focus:border-green-600">
+                                <input type="password" id="card-cvv" placeholder="•••" maxlength="3" class="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-xl focus:outline-none focus:border-green-600">
                             </div>
                         </div>
                     </div>
@@ -130,11 +129,11 @@ include __DIR__ . '/../includes/navbar.php';
                 <div class="space-y-3 text-sm">
                     <div class="flex justify-between text-gray-600 dark:text-gray-400">
                         <span>Subtotal</span>
-                        <span>৳245.50</span>
+                        <span>৳245</span>
                     </div>
                     <div class="flex justify-between text-gray-600 dark:text-gray-400">
                         <span>Delivery Fee</span>
-                        <span>৳5.00</span>
+                        <span>৳30</span>
                     </div>
                     <div class="flex justify-between text-gray-600 dark:text-gray-400">
                         <span>Vat / Tax</span>
@@ -143,7 +142,7 @@ include __DIR__ . '/../includes/navbar.php';
                     <hr class="border-gray-200 dark:border-gray-700 my-2">
                     <div class="flex justify-between font-bold text-base dark:text-white">
                         <span>Total Payable</span>
-                        <span class="text-green-600">৳250.50</span>
+                        <span class="text-green-600">৳275</span>
                     </div>
                 </div>
 
@@ -195,6 +194,10 @@ function selectMethod(method) {
     const formMfs = document.getElementById('form-mfs');
     const formCard = document.getElementById('form-card');
 
+
+    document.getElementById('mfs-phone').value = '';
+    document.getElementById('mfs-pin').value = '';
+
     payBtn.removeAttribute('disabled');
     payBtn.className = "w-full mt-6 bg-green-600 hover:bg-green-700 text-white font-semibold py-3.5 rounded-xl cursor-pointer shadow-lg shadow-green-600/20 transition-all duration-300 flex items-center justify-center gap-2";
     selectPrompt.classList.add('hidden');
@@ -204,13 +207,15 @@ function selectMethod(method) {
         activeCard.querySelector('.check-icon').classList.remove('opacity-0');
         formMfs.classList.remove('hidden');
         formCard.classList.add('hidden');
-        document.getElementById('label-mfs-phone').innerText = 'bKash Wallet Number';
+        document.getElementById('label-mfs-phone').innerText = 'Enter your bKash Number';
+        document.getElementById('label-mfs-pin').innerText = 'Enter bKash PIN';
     } else if (method === 'nagad') {
         activeCard.classList.add('active', 'border-orange-500');
         activeCard.querySelector('.check-icon').classList.remove('opacity-0');
         formMfs.classList.remove('hidden');
         formCard.classList.add('hidden');
-        document.getElementById('label-mfs-phone').innerText = 'Nagad Account Number';
+        document.getElementById('label-mfs-phone').innerText = 'Enter your Nagad Number';
+        document.getElementById('label-mfs-pin').innerText = 'Enter Nagad PIN';
     } else if (method === 'card') {
         activeCard.classList.add('active', 'border-blue-500');
         activeCard.querySelector('.check-icon').classList.remove('opacity-0');
@@ -220,6 +225,31 @@ function selectMethod(method) {
 }
 
 function runSimulation() {
+    
+    if (selectedPaymentMethod === 'bkash' || selectedPaymentMethod === 'nagad') {
+        const phone = document.getElementById('mfs-phone').value.trim();
+        const pin = document.getElementById('mfs-pin').value.trim();
+        const mfsName = selectedPaymentMethod === 'bkash' ? 'bKash' : 'Nagad';
+
+        if (phone.length !== 11 || isNaN(phone)) {
+            alert(`Please enter a valid 11-digit ${mfsName} phone number.`);
+            return;
+        }
+        if (pin.length < 4 || isNaN(pin)) {
+            alert(`Please enter a valid PIN number.`);
+            return;
+        }
+    }
+
+    if (selectedPaymentMethod === 'card') {
+        const cardName = document.getElementById('card-name').value.trim();
+        const cardNumber = document.getElementById('card-number').value.trim();
+        if(!cardName || !cardNumber) {
+            alert('Please fill out card details properly.');
+            return;
+        }
+    }
+
     const modal = document.getElementById('payment-modal');
     const loadingState = document.getElementById('modal-loading');
     const successState = document.getElementById('modal-success');

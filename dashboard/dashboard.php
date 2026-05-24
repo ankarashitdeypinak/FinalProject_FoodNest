@@ -85,7 +85,7 @@ $userProfile = $stmt->fetch(PDO::FETCH_ASSOC);
                 <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between">
                     <div>
                         <span class="text-gray-400 text-xs font-medium">Total Spent</span>
-                        <h3 class="text-2xl font-bold text-gray-900 mt-1">৳245.50</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mt-1">৳245</h3>
                     </div>
                     <div class="flex justify-between items-center mt-4">
                         <span class="text-[11px] text-gray-400 hover:underline cursor-pointer">View details</span>
@@ -120,7 +120,7 @@ $userProfile = $stmt->fetch(PDO::FETCH_ASSOC);
                                 </div>
                             </div>
                             <div class="text-right">
-                                <p class="font-bold text-gray-900 text-sm">৳8.99</p>
+                                <p class="font-bold text-gray-900 text-sm">৳250</p>
                                 <span class="text-[10px] bg-green-50 text-green-700 px-2 py-0.5 rounded-full font-semibold">Delivered</span>
                             </div>
                         </div>
@@ -133,7 +133,7 @@ $userProfile = $stmt->fetch(PDO::FETCH_ASSOC);
                                 </div>
                             </div>
                             <div class="text-right">
-                                <p class="font-bold text-gray-900 text-sm">৳11.50</p>
+                                <p class="font-bold text-gray-900 text-sm">৳350</p>
                                 <span class="text-[10px] bg-green-50 text-green-700 px-2 py-0.5 rounded-full font-semibold">Delivered</span>
                             </div>
                         </div>
@@ -146,7 +146,7 @@ $userProfile = $stmt->fetch(PDO::FETCH_ASSOC);
                                 </div>
                             </div>
                             <div class="text-right">
-                                <p class="font-bold text-gray-900 text-sm">৳6.99</p>
+                                <p class="font-bold text-gray-900 text-sm">৳150</p>
                                 <span class="text-[10px] bg-red-50 text-red-600 px-2 py-0.5 rounded-full font-semibold">Cancelled</span>
                             </div>
                         </div>

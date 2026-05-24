@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
         <div class="bg-green-700 p-12 flex flex-col justify-between text-white relative">
             <div>
                 <span class="text-2xl font-bold flex items-center gap-1 mb-8">🥗 FoodNest</span>
-                <h2 class="text-4xl font-extrabold leading-tight">Welcome Back! 👋</h2>
+                <h2 class="text-4xl font-extrabold leading-tight">Welcome Back! </h2>
                 <p class="text-green-100 text-sm mt-2">Please login to your account to continue ordering delicious updates.</p>
             </div>
             <div class="mt-8 rounded-full overflow-hidden shadow-xl aspect-square border-4 border-green-600/30 max-w-[280px] mx-auto">

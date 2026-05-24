@@ -72,27 +72,27 @@ if (!isset($conn)) {
                     'item' => 'Grilled Chicken Bowl',
                     'restaurant' => 'Healthy Bites Tavern',
                     'date' => 'May 20, 2026',
-                    'price' => '৳8.99',
+                    'price' => '৳250',
                     'status' => 'Delivered',
                     'status_color' => 'bg-[#E8F5E9] text-[#2E7D32]'
                 ],
                 [
                     'id' => '#ORD-7741',
-                    'image' => 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80',
+                    'image' => 'https://cdn.loveandlemons.com/wp-content/uploads/2023/02/vegetarian-pizza.jpg',
                     'item' => 'Veggie Delicacy Pizza',
                     'restaurant' => 'Pizza House Co.',
                     'date' => 'May 16, 2026',
-                    'price' => '৳31.55',
+                    'price' => '৳340',
                     'status' => 'Delivered',
                     'status_color' => 'bg-[#E8F5E9] text-[#2E7D32]'
                 ],
                 [
                     'id' => '#ORD-3129',
-                    'image' => 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80',
+                    'image' => 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80',
                     'item' => 'Smoked Chicken Burger',
                     'restaurant' => 'Burger Hub Express',
                     'date' => 'May 15, 2026',
-                    'price' => '৳5.99',
+                    'price' => '৳180',
                     'status' => 'Cancelled',
                     'status_color' => 'bg-[#FFEBEE] text-rose-600'
                 ]

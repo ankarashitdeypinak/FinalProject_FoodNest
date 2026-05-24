@@ -98,7 +98,7 @@
                     </div>
 
                     <div class="absolute top-4 -right-2 w-24 h-24 bg-[#FF9800] rounded-full flex flex-col items-center justify-center text-white shadow-xl z-20 transform rotate-12">
-                        <span class="text-2xl font-black leading-none">50%</span>
+                        <span class="text-2xl font-black leading-none">20%</span>
                         <span class="text-xs tracking-widest font-bold mt-1">OFF</span>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                             Grilled Chicken Bowl
                         </h4>
                         <p class="text-[#2E7D32] font-extrabold text-2xl mt-1">
-                            ৳8.99
+                            ৳200
                         </p>
                     </div>
                     <button class="w-14 h-14 rounded-2xl bg-[#FFF0F3] flex items-center justify-center text-2xl text-rose-500 hover:scale-110 transition">
